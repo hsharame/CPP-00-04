@@ -6,7 +6,7 @@
 /*   By: hsharame <hsharame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 14:01:08 by hsharame          #+#    #+#             */
-/*   Updated: 2025/01/24 14:43:11 by hsharame         ###   ########.fr       */
+/*   Updated: 2025/01/27 15:00:10 by hsharame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,15 @@ class PhoneBook
 		PhoneBook(void);
 		~PhoneBook(void);
 
-		void	display_contact(Contact to_display) const;
-		void	display_phonebook() const;
-		void	add_contact();
+		void		search();
+		void		display_phonebook();
+		void		add_contact();
+		std::string	format(std::string str);
 
 	private:
 	
-		Contact _contact1;
-		Contact _contact2;
-		Contact _contact3;
-		Contact _contact4;
-		Contact _contact5;
-		Contact _contact6;
-		Contact _contact7;
-		Contact _contact8;
+		Contact _contact[8];
+		int		_index;
 };
 
 #endif
